@@ -4,7 +4,7 @@ def find_from_lemma(lemma, cur, bigram=False, trigram=False, previous_token=0):
     else:
         bigram_command = ''
     if trigram:
-        trigram_command = f""" AND corpus_tokens.token_id = {previous_token+2}"""
+        trigram_command = f""" AND corpus_tokens.token_id = {previous_token+1}"""
     else:
         trigram_command = ''
     command = f"""
