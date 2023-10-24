@@ -6,6 +6,7 @@ import pymorphy2
 
 con = sqlite3.connect('data/database.db')  # подключение
 cur = con.cursor()  # курсор
+#queries = input('Введите запрос: ')
 def search(query, bigram=False, trigram=False, previous_token=0):
     morph = pymorphy2.MorphAnalyzer()
     if '%%' in query:
@@ -28,8 +29,7 @@ def print_result(results):
         print(result[0], result[1][0],
              result[1][1], result[1][2], result[1][3], sep='\n')
         print('\n')
-def get_results(cur):
-    queries = input('Введите запрос: ')
+def get_results(cur, queries):
     queries = queries.replace('"','%%')
     results = []
     for find_0 in search(queries.split()[0]):
@@ -45,5 +45,4 @@ def get_results(cur):
                             results.append([f'{find_0[1]} {find_1[1]} {find_2[1]}', find_0[2:]])
                 else:
                     results.append([f'{find_0[1]} {find_1[1]}', find_0[2:]])
-    print_result(results)
-get_results(cur)
+    return results
