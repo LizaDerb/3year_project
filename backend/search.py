@@ -4,8 +4,8 @@ import re
 import sqlite3
 import pymorphy2
 
-con = sqlite3.connect('data/database.db')  # подключение
-cur = con.cursor()  # курсор
+#con = sqlite3.connect('data/database.db')  # подключение
+#cur = con.cursor()  # курсор
 #queries = input('Введите запрос: ')
 def search(query, bigram=False, trigram=False, previous_token=0):
     morph = pymorphy2.MorphAnalyzer()
