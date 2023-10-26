@@ -8,3 +8,17 @@
 В backend/**search_functions.py**, backend/**tagset.py**, backend/**search.py** отражены функции типов поиска, используемый тэгсет (pymorphy), главная функция поиска по корпусу соответственно. В тетрадке backend/**testing.ipynb** отражено тестирование разных типов поиска.
 
 ## ЧАСТЬ НА 10
+В папке flask_app находятся файлы, необходимые для работы сайт (функции, html-шаблоны):
+
+- search.py, search_functions.py - функции поиска по базе данных
+
+- database.db - корпус
+
+- routes.py - основная функция (вводы и выводы)
+
+В папке templates содержатся шаблоны html-страниц: 
+* instruction.html - страница с инструкция по использованию корпуса
+* main.html - главная страницы с окном поиска
+* search_results.html - страница с результати поиска
+
+Сам сайт можно посмотреть по [ссылке](nlpprojectanyaliza.pythonanywhere.com)
