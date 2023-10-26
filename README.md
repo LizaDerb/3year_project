@@ -21,4 +21,4 @@
 * main.html - главная страницы с окном поиска
 * search_results.html - страница с результати поиска
 
-Сам сайт можно посмотреть по [ссылке](nlpprojectanyaliza.pythonanywhere.com)
+Сам сайт можно посмотреть по [ссылке](https://nlpprojectanyaliza.pythonanywhere.com)
